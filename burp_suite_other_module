@@ -1,0 +1,41 @@
+#Task1 introduction
+
+burpのdecorder、comparer、sequencer、organizerについて扱う。
+
+
+#Task2 Decoder: Overview
+
+decorderは攻撃中などに得られたデータをデコードするのに役立つ。同時に、自分で用意したデータをエンコードすることやハッシュ値の生成が可能である。
+ほかのモジュールと同様に、右クリックからsend to decoderが可能。
+
+
+#Task3 Decoder: Encoding/Decoding
+
+各デコード/エンコードについての説明。一応下記の通り。
+plain →　平文。
+URL　→　文字のASCIIコードを16進数に直して%をつける。たとえば、「/」なら、ASCII →47 16進数2Fで「%2F」。
+HTML Entity →　特殊文字を&で始まる16進数または文字参照で表し、;をつける。
+Base64 → データをASCII互換形式に変換する一般的な変換方式。文字をASCII値に変換して8ビットの2進数に変換して6ビットに分けて10進数にしてbase64の対応で文字や記号に変換する。
+ASCII Hex → ASCIIコードから16進数に変換する。
+Hex, Octal, Binary →　10進数から16, 8, 2進数に変換する。
+gzip → 圧縮形式エンコード。ページサイズを小さくする。　
+Smart Decodeはアンノウンチャンクを勝手にデコードしてくれる。ただし過度な期待は禁物。間違うこともある。
+
+
+#Task4 Decoder: Hashing
+
+burpにおけるハッシュの生成方法を理解する。基本的な操作で何とかなる。
+ハッシュアルゴリズムの適用を行っただけでは見慣れない文字列が生成される。それに対して16進数文字列で変換したものが見慣れたいつものハッシュ値になる。
+
+
+#Task5 Comparer: Overview
+
+ComparerはASCII単位(words)またはバイト単位(bytes)で比較を行う機能。PasteかLoadで与えたデータを比較してくれる。差分を出力のタイトル部分に表示する機能もある。
+
+#Task6 Comparer: Example
+
+実際に使ってみる。
+
+
+
+
