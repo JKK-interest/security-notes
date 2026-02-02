@@ -34,7 +34,7 @@ ComparerはASCII単位(words)またはバイト単位(bytes)で比較を行う�
 
 #Task6 Comparer: Example
 
-実際に使ってみる。
+実際に使ってみる。wordでは違う文字列となった箇所をハイライトしてくれる。
 
 
 
