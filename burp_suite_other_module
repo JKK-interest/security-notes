@@ -32,10 +32,33 @@ burpにおけるハッシュの生成方法を理解する。基本的な操作�
 
 ComparerはASCII単位(words)またはバイト単位(bytes)で比較を行う機能。PasteかLoadで与えたデータを比較してくれる。差分を出力のタイトル部分に表示する機能もある。
 
+
 #Task6 Comparer: Example
 
 実際に使ってみる。wordでは違う文字列となった箇所をハイライトしてくれる。
 
 
+#Task7 Sequencer: Overview
+
+SequencerはTokenのエントロピーが高いか低いかをTokenを収集して分析する。エントロピーはアンチブルートフォースなどに使われるトークンのランダム性の強さの指標。
+Tokenの収集方法にはサーバーにリクエストを多数送信してTokenを集めるLive capture, すでに収集したTokenを読み込むManual Loadがある。
 
 
+#Task8 Sequencer: Live Capture
+
+Live captureを実際に使ってみる。約一万個程度のキャプチャされたトークンがあれば十分。
+
+
+#Task9 Sequencer: Analysis
+
+トークンの安全性レポートの見方。全体評価はトークンに関する広範な評価、有効エントロピーはトークンの乱雑さの指標で大きいほどブルートフォースされにくい、信頼度は有意水準、サンプルはサンプルに関する詳細。
+
+
+#Task10 Organizer: Overview
+
+Organizerは主にペンテストなどに使う、怪しいと思ったHTTPリクエストなどをコピー記録しておくための機能。
+
+
+#Task11 Conclusion
+
+Decoderはデータのデコード、エンコードを行う。Comparerは二つのデータセット間の違いを探すのに役立つ。シーケンサーはエントロピーを評価する。オーガナイザーはリクエストを記録しておくのに役立つ。
